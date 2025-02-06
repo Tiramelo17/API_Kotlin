@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: io.netty:netty-buffer:4.1.115.Final" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="io.netty" artifactId="netty-buffer" version="4.1.115.Final" baseVersion="4.1.115.Final" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-buffer/4.1.115.Final/d5daf1030e5c36d198caf7562da2441a97ec0df6/netty-buffer-4.1.115.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-buffer/4.1.115.Final/637b18c99011ba568a0f3a08bcb918c463d34cef/netty-buffer-4.1.115.Final-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-buffer/4.1.115.Final/226b90dca14bedb0694f47495299223c787a19f5/netty-buffer-4.1.115.Final-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

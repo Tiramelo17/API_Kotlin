@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework.grpc:spring-grpc-core:0.3.0" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.springframework.grpc" artifactId="spring-grpc-core" version="0.3.0" baseVersion="0.3.0" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.grpc/spring-grpc-core/0.3.0/5f625f31d8a796ee19e7c5330aea6bbca30a1d04/spring-grpc-core-0.3.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.grpc/spring-grpc-core/0.3.0/59803b0027e5c4d90ea268628b2180a2e78cf9ec/spring-grpc-core-0.3.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.grpc/spring-grpc-core/0.3.0/7ca7fd916c3f88bb2a0bef47f81a38d1df89dd1b/spring-grpc-core-0.3.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

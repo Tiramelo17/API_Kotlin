@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.br.order";
+option java_outer_classname = "ProductServiceProto";
+
+service ProductService {
+  rpc GetProducts (ProductRequest) returns (ProductsResponse);
+}
+
+message ProductRequest {
+  repeated int32 id = 1;
+}
+
+message ProductsResponse {
+  repeated ProductResponse products = 1;
+}
+
+message ProductResponse {
+  int32 id = 1;
+  string name = 2;
+  double price = 3;
+  string description = 4;
+}

@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Maven: com.google.protobuf:protobuf-java-util:3.25.5" type="java-imported" external-system-id="Maven">
+    <properties groupId="com.google.protobuf" artifactId="protobuf-java-util" version="3.25.5" baseVersion="3.25.5" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java-util/3.25.5/protobuf-java-util-3.25.5.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java-util/3.25.5/protobuf-java-util-3.25.5-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java-util/3.25.5/protobuf-java-util-3.25.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

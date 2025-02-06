@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: ms-order
+
+  datasource:
+    url: jdbc:MySql://localhost:3307/order_db
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        jdbc:
+          lob:
+            non_contextual_creation: true
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
+  api-docs:
+    path: /v3/api-docs
+
+server:
+  port: 8081
+
+grpc:
+  server:
+      address: "localhost"
+      port: "9090"
+      enableKeepAlive: true

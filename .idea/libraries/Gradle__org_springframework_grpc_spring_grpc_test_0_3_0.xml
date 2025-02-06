@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework.grpc:spring-grpc-test:0.3.0" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.springframework.grpc" artifactId="spring-grpc-test" version="0.3.0" baseVersion="0.3.0" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.grpc/spring-grpc-test/0.3.0/b9f66a158098a7e0a2745e25161e2d8e8a20ae2f/spring-grpc-test-0.3.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.grpc/spring-grpc-test/0.3.0/49d7bca5dd7072558daeea9e9234287942cecc1d/spring-grpc-test-0.3.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.grpc/spring-grpc-test/0.3.0/e896e3f7ff6eb4b69947b5dbf4541c6f9ee5e907/spring-grpc-test-0.3.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

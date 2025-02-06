@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Maven: org.springframework.grpc:spring-grpc-spring-boot-starter:0.3.0" type="java-imported" external-system-id="Maven">
+    <properties groupId="org.springframework.grpc" artifactId="spring-grpc-spring-boot-starter" version="0.3.0" baseVersion="0.3.0" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/grpc/spring-grpc-spring-boot-starter/0.3.0/spring-grpc-spring-boot-starter-0.3.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/grpc/spring-grpc-spring-boot-starter/0.3.0/spring-grpc-spring-boot-starter-0.3.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/grpc/spring-grpc-spring-boot-starter/0.3.0/spring-grpc-spring-boot-starter-0.3.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
