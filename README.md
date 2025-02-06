@@ -75,7 +75,7 @@ To get started with the project, clone the repository and follow the instruction
 
 ```sh
 git clone <repository-url>
-cd msOrder
+cd ms_Order
 ./gradlew build
 cd ../ms_order
 docker-compose -d
