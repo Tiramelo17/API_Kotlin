@@ -1,4 +1,4 @@
-# Microservices Project: msOrder and msProduct
+# Microservices Project: ms_order and ms_product
 
 ## Overview
 
