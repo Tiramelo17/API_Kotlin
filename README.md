@@ -77,9 +77,10 @@ To get started with the project, clone the repository and follow the instruction
 git clone <repository-url>
 cd msOrder
 ./gradlew build
-cd ../msProduct
+cd ../ms_order
+docker-compose -d
 ./gradlew build
-
-
-Conclusion
+```
+## Conclusion
 This project serves as a practical example of building and integrating microservices using Kotlin, Spring Boot, and gRPC. It demonstrates how to implement advanced concepts and business rules in a real-world scenario.
+
