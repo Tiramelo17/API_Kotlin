@@ -6,7 +6,7 @@ This repository contains two microservices, `ms_order` and `ms_product`, which i
 
 ## Services
 
-### msOrder
+### ms_order
 
 The `ms_order` service is responsible for managing orders. It communicates with the `ms_product` service via gRPC to retrieve product information. The service also provides RESTful endpoints for creating, retrieving, and managing orders.
 
@@ -26,7 +26,7 @@ The `ms_order` service is responsible for managing orders. It communicates with 
   - Path Variable: `id`
   - Response: `FindOrderResponse`
 
-### msProduct
+### ms_product
 
 The `ms_product` service manages product information and serves as a gRPC server. It provides product details to the `ms_order` service via gRPC and also exposes RESTful endpoints for CRUD operations on products.
 
