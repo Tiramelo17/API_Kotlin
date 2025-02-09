@@ -9,6 +9,7 @@ import com.br.order.model.response.FindOrderResponse
 import com.br.order.repository.OrderRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
+import java.util.Optional
 
 @Service
 class OrderService {
@@ -41,9 +42,14 @@ class OrderService {
             .let { mapper.toFindOrderResponse(it) }
     }
 
+    fun deleteOrderById(id: Long){
+        orderRepository.deleteOrderBy(id)
+            .orElseThrow() { NoSuchElementException("Order not found with id: $id") }
+    }
+
     fun calcTotalPrice(products: Map<Int,Int>) : Double {
         return productClientGrpc.getProducts(products.keys.toMutableList())
-            .let { it.productsList.map { product -> product.price * products.get(product.id)!! } }
+            .let { it.productsList.map { product -> product.price * products[product.id]!! } }
             .reduce{acc, price -> acc + price}
     }
 }

@@ -19,9 +19,14 @@ class ProductClientGrpc {
     }
 
     fun getProducts(ids: MutableList<Int>) : ProductsResponse {
-        return client.getProducts(ProductRequest.newBuilder()
-            .addAllId(ids)
-            .build()
-        )
+        return runCatching {
+            client.getProducts(
+                ProductRequest.newBuilder()
+                    .addAllId(ids)
+                    .build()
+            )
+        }.getOrElse {
+            throw NoSuchElementException("Failed to find products")
+        }
     }
 }

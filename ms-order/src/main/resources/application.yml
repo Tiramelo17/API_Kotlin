@@ -18,6 +18,9 @@ spring:
           lob:
             non_contextual_creation: true
 
+server:
+  port: 8081
+
 springdoc:
   swagger-ui:
     path: /swagger-ui.html
@@ -25,11 +28,10 @@ springdoc:
   api-docs:
     path: /v3/api-docs
 
-server:
-  port: 8081
-
 grpc:
   server:
       address: "localhost"
       port: "9090"
       enableKeepAlive: true
+
+

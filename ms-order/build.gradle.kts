@@ -41,6 +41,11 @@ dependencies {
 	implementation("org.mapstruct:mapstruct:1.5.3.Final")
 	kapt("org.mapstruct:mapstruct-processor:1.5.3.Final")
 	implementation("org.springframework.boot:spring-boot-starter-validation")
+	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.4")
+	implementation("org.springdoc:springdoc-openapi-ui:1.8.0")
+	implementation("org.springdoc:springdoc-openapi-maven-plugin:1.4")
+	implementation("org.springdoc:springdoc-openapi-starter-common:2.8.4")
 }
 
 dependencyManagement {
