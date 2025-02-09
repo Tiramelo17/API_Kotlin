@@ -2,7 +2,7 @@ package com.kotlin.productapi.model.request
 
 import jakarta.validation.constraints.Min
 import jakarta.validation.constraints.NotBlank
-import jakarta.validation.constraints.NotEmpty
+
 data class ProductRequest(
     @field:NotBlank(message = "Name is required")
     val name: String,
