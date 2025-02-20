@@ -11,5 +11,6 @@ data class Product (
     val id : Long = 0,
     var name: String,
     var price: Double,
+    var stock: Int,
     var description: String){
 }

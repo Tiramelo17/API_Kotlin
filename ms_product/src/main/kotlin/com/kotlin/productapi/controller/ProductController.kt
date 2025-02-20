@@ -3,7 +3,7 @@ package com.kotlin.productapi.controller
 import com.kotlin.productapi.exeption.ProductNotFoundExeption
 import com.kotlin.productapi.model.request.ProductRequest
 import com.kotlin.productapi.model.request.UpdateProductRequest
-import com.kotlin.productapi.model.response.ProductReponse
+import com.kotlin.productapi.model.response.ProductResponse
 import com.kotlin.productapi.service.ProductService
 import io.swagger.v3.oas.annotations.Operation
 import jakarta.validation.Valid
@@ -26,25 +26,25 @@ class ProductController {
 
     @Operation(summary = "Get one product", description = "Returns a product by id")
     @GetMapping("/{productId}")
-    fun findProductById(@PathVariable productId: Long): ProductReponse {
+    fun findProductById(@PathVariable productId: Long): ProductResponse {
         return productService.findProductById(productId) ?: throw ProductNotFoundExeption(productId)
     }
 
     @Operation(summary = "Get all products", description = "Returns returns a list of products")
     @GetMapping
-    fun findAllProducts(): MutableList<ProductReponse> {
+    fun findAllProducts(): MutableList<ProductResponse> {
         return productService.findAllProduct()
     }
 
     @Operation(summary = "Create a new product", description = "Returns a new product created")
     @PostMapping
-    fun createProduct(@RequestBody @Valid request: ProductRequest): ProductReponse {
+    fun createProduct(@RequestBody @Valid request: ProductRequest): ProductResponse {
         return productService.createNewProduct(request)
     }
 
     @Operation(summary = "Update a product", description = "Returns the product change")
     @PutMapping("/{productId}")
-    fun updateProduct(@RequestBody request: UpdateProductRequest, @PathVariable productId: Long): ProductReponse {
+    fun updateProduct(@RequestBody request: UpdateProductRequest, @PathVariable productId: Long): ProductResponse {
         return productService.updateProduct(productId ,request)
     }
 

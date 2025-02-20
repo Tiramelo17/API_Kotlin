@@ -45,6 +45,8 @@ dependencies {
     implementation("org.springdoc:springdoc-openapi-ui:1.8.0")
     implementation("org.springdoc:springdoc-openapi-maven-plugin:1.4")
     implementation("org.springdoc:springdoc-openapi-starter-common:2.8.4")
+    implementation ("io.springfox:springfox-boot-starter:3.0.0")
+    implementation ("io.springfox:springfox-swagger-ui:3.0.0")
 }
 
 dependencyManagement {

@@ -5,7 +5,7 @@ import com.kotlin.productapi.model.Product
 import com.kotlin.productapi.model.ProductMapper
 import com.kotlin.productapi.model.request.ProductRequest
 import com.kotlin.productapi.model.request.UpdateProductRequest
-import com.kotlin.productapi.model.response.ProductReponse
+import com.kotlin.productapi.model.response.ProductResponse
 import com.kotlin.productapi.repository.ProductRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
@@ -17,20 +17,21 @@ class ProductService {
 
     private val mapper: ProductMapper = ProductMapper.INSTANCE
 
-    fun createNewProduct(request : ProductRequest): ProductReponse {
+    fun createNewProduct(request : ProductRequest): ProductResponse {
        return productRepository.findProductByName(request.name)
-           .map { product -> ProductReponse(id = product.id, name = product.name, price = product.price, description = product.description)}
+           .map { product -> ProductResponse(id = product.id, name = product.name, price = product.price, stock = product.stock, description = product.description)}
            .orElseGet{
                val productCreate = productRepository.save(mapper.toProduct(request))
                mapper.toProductResponse(productCreate)
            }
     }
 
-    fun updateProduct(productId: Long, request: UpdateProductRequest) : ProductReponse {
+    fun updateProduct(productId: Long, request: UpdateProductRequest) : ProductResponse {
         return productRepository.findById(productId)
             .map { product ->
                 product.name = request.name ?: product.name
                 product.price = request.price ?: product.price
+                product.stock = request.stock ?: product.stock
                 product.description = request.description ?: product.description
                 productRepository.save(product)
             }
@@ -38,13 +39,17 @@ class ProductService {
             .orElseThrow{ProductNotFoundExeption(productId)}
     }
 
-    fun findAllProduct(): MutableList<ProductReponse> {
+    fun updateStock(productId: Long, quantity: Int) {
+        productRepository.updateStockById(productId, quantity)
+    }
+
+    fun findAllProduct(): MutableList<ProductResponse> {
         return productRepository.findAll()
-            .map { produc -> ProductReponse(id = produc.id, name = produc.name, price = produc.price, description = produc.description)}
+            .map { product -> ProductResponse(id = product.id, name = product.name, price = product.price, stock = product.stock, description = product.description)}
             .toMutableList()
     }
 
-    fun findProductById(productId: Long): ProductReponse {
+    fun findProductById(productId: Long): ProductResponse {
         return productRepository.findById(productId)
             .map { product -> mapper.toProductResponse(product)}
             .orElseThrow{ProductNotFoundExeption(productId)}
@@ -54,4 +59,6 @@ class ProductService {
         return this.findProductById(productId)
             .let { productRepository.deleteById(productId) }
     }
+
+    val thereIsEnoughStock: (Int, Int) -> Boolean = {stock, order -> stock > order }
 }
