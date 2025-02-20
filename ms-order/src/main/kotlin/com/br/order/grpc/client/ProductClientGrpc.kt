@@ -1,9 +1,6 @@
 package com.br.order.grpc.client
 
-import com.br.order.ProductRequest
-import com.br.order.ProductResponse
-import com.br.order.ProductServiceGrpc
-import com.br.order.ProductsResponse
+import com.br.order.*
 import io.grpc.ManagedChannel
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
@@ -18,15 +15,22 @@ class ProductClientGrpc {
         ProductServiceGrpc.newBlockingStub(channel)
     }
 
-    fun getProducts(ids: MutableList<Int>) : ProductsResponse {
+    fun getProducts(products: Map<Int,Int>) : ProductsResponse {
         return runCatching {
+            val productList = products
+                .map { (id, qtd) ->
+                    ProductRequest.newBuilder()
+                        .setId(id)
+                        .setQtd(qtd)
+                        .build()
+                }
             client.getProducts(
-                ProductRequest.newBuilder()
-                    .addAllId(ids)
+                ProductsRequest.newBuilder()
+                    .addAllProducts(productList)
                     .build()
             )
         }.getOrElse {
-            throw NoSuchElementException("Failed to find products")
+            throw it
         }
     }
 }

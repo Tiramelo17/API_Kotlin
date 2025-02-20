@@ -7,5 +7,4 @@ import java.util.Optional
 
 @Repository
 interface OrderRepository : JpaRepository<Order, Long> {
-    fun deleteOrderBy(orderId: Long) : Optional<Order>
 }

@@ -43,12 +43,12 @@ class OrderService {
     }
 
     fun deleteOrderById(id: Long){
-        orderRepository.deleteOrderBy(id)
+        Optional.of(orderRepository.deleteById(id))
             .orElseThrow() { NoSuchElementException("Order not found with id: $id") }
     }
 
     fun calcTotalPrice(products: Map<Int,Int>) : Double {
-        return productClientGrpc.getProducts(products.keys.toMutableList())
+        return productClientGrpc.getProducts(products)
             .let { it.productsList.map { product -> product.price * products[product.id]!! } }
             .reduce{acc, price -> acc + price}
     }
